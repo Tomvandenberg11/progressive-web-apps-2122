@@ -1,8 +1,0 @@
-<%- include ./partials/head.ejs %>
-
-<h1>Posts</h1>
-<% postData.forEach(function(post) { %>
-	<a href="/posts/<%- post.id %>"><%- post.title %></a>
-<% }) %>
-
-<%- include ./partials/footer.ejs %>

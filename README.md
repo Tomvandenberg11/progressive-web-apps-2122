@@ -4,7 +4,7 @@ Welkom bij mijn project van [Progressive Web Apps](https://github.com/cmda-minor
 
 De website is [hier](https://tomvandenberg11.github.io/oba-ondernemen/ "OBA Ondernemen") te zien.
 
-![Screenshot](images/screenshot.png)
+![Screenshot](static/images/screenshot.png)
 
 ## Inhoudsopgave
 
@@ -23,7 +23,7 @@ De website is [hier](https://tomvandenberg11.github.io/oba-ondernemen/ "OBA Onde
 
 ## Activity Diagram
 
-![Activity](images/activity_oba.png)
+![Activity](static/images/activity_oba.png)
 
 ## Hoe te gebruiken?
 

@@ -10,8 +10,10 @@
   "author": "Tom van den Berg",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2"
   },
   "repository": {
     "type": "git",
