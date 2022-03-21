@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  overflow-x: hidden;
+}
+
+/****** HEADER  ******/
+header {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.6);
+  position: fixed;
+  z-index: 2;
+}
+
+.nonFixed {
+  position: relative;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div a {
+  display: inline-flex;
+  height: auto;
+  align-items: center;
+  text-decoration: none;
+}
+
+header div a img {
+  height: 30px;
+}
+
+header div a h2 {
+  margin-left: 10px;
+  font-size: 42px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  width: 30vw;
+  max-width: 250px;
+}
+
+/****** MAIN  ******/
+main {
+  margin-bottom: 150px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
+}
+
+.empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section article {
+  width: 50vw;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main article div {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background-color: rgba(33, 33, 33, 0.6);
+  padding: 10px;
+  border-radius: 2px;
+  color: #fff;
+  margin-right: 50px;
+}
+
+.displayNone {
+  display: none;
+}
+
+button {
+  width: auto;
+  padding: 10px;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.6);
+  height: auto;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  font-size: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  padding: 15px;
+}
+
+/****** SINGLE ART PAGE  ******/
+.singleArt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 50px;
+  flex-direction: column;
+  margin-bottom: -150px;
+  position: relative;
+  overflow: visible;
+}
+
+.singleArt a:first-child {
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  color: black;
+}
+
+.singleArt img {
+  display: block;
+  max-width: 80vw;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  border: 10px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.singleArt h3 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.singleArt p {
+  max-width: 600px;
+  display: block;
+  margin: 50px auto 0;
+}
+
+.singleArt a {
+  color: black;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+/****** MEDIAQUERIES  ******/
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
+  }
+  .container article {
+    width: 100vw;
+  }
+  header div a img {
+    height: 20px;
+  }
+  header div a h2 {
+    font-size: 24px;
+  }
+  header input {
+    font-size: 12px;
+  }
+  main article div {
+    left: 15px;
+    margin-right: 15px;
+  }
+  .singleArt {
+    margin-top: 70px;
+  }
+  .singleArt div {
+    width: 95vw;
+  }
+  .singleArt a:first-child {
+    top: -50px;
+    left: 2.5vw;
+  }
+  .singleArt h3 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "progressive-web-apps",
+  "version": "1.0.0",
+  "description": "this is a project for progressive-web-apps",
+  "main": "index.js",
+  "scripts": {
+    "server": "node app.js",
+    "start": "nodemon app.js"
+  },
+  "author": "Tom van den Berg",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomvandenberg11/progressive-web-apps-2122.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomvandenberg11/progressive-web-apps-2122/issues"
+  },
+  "homepage": "https://github.com/Tomvandenberg11/progressive-web-apps-2122"
+}
