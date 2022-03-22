@@ -13,10 +13,16 @@
 <main>
     <section>
         <% data.map((art) => {
-            // console.log(art.id)
             const img = art.webImage.url.slice(0, -3) + "=s1000"
         %>
-
+        <a href="#">Terug</a>
+            <div>
+                <h3><%= art.title %></h3>
+                <img src="<%= img %>"/>
+    <!--            <p><%= art.longTitle %></p>-->
+    <!--            <a href="${link}" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>-->
+            </div>
+        </a>
         <% }) %>
 
     </section>

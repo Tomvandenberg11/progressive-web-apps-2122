@@ -33,19 +33,18 @@ app.get('/', (req, res) => {
   })
 
 app.get('/art/:id', function(req, res) {
-  request(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`, {json: true}, function (err, requestRes, json){
-    if (err) {
-      // We got an error
-      res.send(err);
-    } else {
-      // Render the page using the 'post' view and our body data
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`)
+    .then(async response => {
+      const artWorks = await response.json()
+      const result = artWorks.artObjects.filter((item) => item.id === req.params.id)
+
       res.render('detail', {
-        pageTitle: `Post ${req.params.id}`,
-        data: json.artObjects
+        title: 'Art Museum' + req.params.id,
+        data: result,
       });
-    }
-  });
-});
+    })
+    .catch(err => res.send(err))
+})
 
 
 app.listen(port, () => {
