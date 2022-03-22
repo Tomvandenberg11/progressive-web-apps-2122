@@ -21,7 +21,7 @@ app.use(express.static('static'));
 
 // Create a home route
 app.get('/', (req, res) => {
-  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`)
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&ps=6`)
     .then(async response => {
       const artWorks = await response.json()
       res.render('index', {
@@ -49,4 +49,21 @@ app.get('/art/:id', function(req, res) {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
+})
+
+app.get('/search', (req, res) => {
+  let result = 1
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&q=${req.query.query}&rs=${result}`)
+    .then(async response => {
+      const artWorks = await response.json()
+      console.log(result)
+      result = artWorks.artObjects.length
+      console.log(result)
+
+      res.render('index', {
+        title: 'Art Museum',
+        data: artWorks.artObjects,
+      });
+    })
+    .catch(err => res.send(err))
 })

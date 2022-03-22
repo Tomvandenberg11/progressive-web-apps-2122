@@ -4,23 +4,21 @@
     <%- include('./components/head.ejs'); -%>
 </head>
 <body>
-<header>
-    <div>
-        <a href="/rijksmuseum-app/"><img src="/images/logo.png" alt="logo"><h2>DIGITAL</h2></a>
-        <input value="" placeholder="Zoek een schilderij of kunstenaar" onfocus="this.value=''" type="text" id="search">
-    </div>
-</header>
+    <%- include('./components/header.ejs'); -%>
 <main>
-    <section>
+    <section class="singleArt">
+
         <% data.map((art) => {
             const img = art.webImage.url.slice(0, -3) + "=s1000"
         %>
-        <a href="#">Terug</a>
-            <div>
-                <h3><%= art.title %></h3>
+            <div class="singleArtContainer">
+                <div>
+                    <h3><%= art.title %></h3>
+                    <p><%= art.longTitle %></p>
+                    <a href="<%= art.link %>" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>
+                    <a href="../">Terug naar resultaten</a>
+                </div>
                 <img src="<%= img %>"/>
-    <!--            <p><%= art.longTitle %></p>-->
-    <!--            <a href="${link}" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>-->
             </div>
         </a>
         <% }) %>
