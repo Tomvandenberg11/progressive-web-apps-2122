@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('./components/head.ejs'); -%>
+</head>
+<body>
+<header>
+    <div>
+        <a href="/rijksmuseum-app/"><img src="/images/logo.png" alt="logo"><h2>DIGITAL</h2></a>
+        <input value="" placeholder="Zoek een schilderij of kunstenaar" onfocus="this.value=''" type="text" id="search">
+    </div>
+</header>
+<main>
+    <section>
+        <% data.map((art) => {
+            // console.log(art.id)
+            const img = art.webImage.url.slice(0, -3) + "=s1000"
+        %>
+
+        <% }) %>
+
+    </section>
+</main>
+</body>
+</html>

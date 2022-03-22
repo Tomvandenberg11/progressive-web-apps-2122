@@ -1,5 +1,6 @@
-const express = require("express")
-const request = require('request');
+const express = require('express')
+const request = require('request')
+const fetch = require('node-fetch')
 const app = express()
 const port = 3000
 
@@ -20,16 +21,26 @@ app.use(express.static('static'));
 
 // Create a home route
 app.get('/', (req, res) => {
-  // Send a plain string using res.send();
-  request(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`, {json: true}, (err, requestRes, json) => {
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`)
+    .then(async response => {
+      const artWorks = await response.json()
+      res.render('index', {
+        title: 'Art Museum',
+        data: artWorks.artObjects,
+      });
+    })
+    .catch(err => res.send(err))
+  })
+
+app.get('/art/:id', function(req, res) {
+  request(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`, {json: true}, function (err, requestRes, json){
     if (err) {
       // We got an error
       res.send(err);
     } else {
-      // console.log(json)
-      // Render the page using the 'posts' view and our body data
-      res.render('index', {
-        pageTitle: 'Art Museum', // We use this for the page title, see views/partials/head.ejs
+      // Render the page using the 'post' view and our body data
+      res.render('detail', {
+        pageTitle: `Post ${req.params.id}`,
         data: json.artObjects
       });
     }
@@ -40,4 +51,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
