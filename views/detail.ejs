@@ -8,20 +8,19 @@
 <main>
     <section class="singleArt">
 
-        <% data.map((art) => {
-            const img = art.webImage.url.slice(0, -3) + "=s1000"
+        <%
+            const img = data.webImage.url.slice(0, -3) + "=s1000"
         %>
             <div class="singleArtContainer">
                 <div>
-                    <h3><%= art.title %></h3>
-                    <p><%= art.longTitle %></p>
-                    <a href="<%= art.link %>" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>
-                    <a href="../">Terug naar resultaten</a>
+                    <h3><%= data.title %></h3>
+                    <p><%= data.label.description ? data.label.description : 'Geen beschrijving' %><br><br></p>
+                    <a href="<%= data.link %>" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>
+                    <a href="javascript:history.back();">Terug naar resultaten</a>
                 </div>
                 <img src="<%= img %>"/>
             </div>
         </a>
-        <% }) %>
 
     </section>
 </main>

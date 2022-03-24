@@ -33,14 +33,13 @@ app.get('/', (req, res) => {
   })
 
 app.get('/art/:id', function(req, res) {
-  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}`)
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection/${req.params.id}?key=${API_KEY}`)
     .then(async response => {
       const artWorks = await response.json()
-      const result = artWorks.artObjects.filter((item) => item.id === req.params.id)
 
       res.render('detail', {
         title: 'Art Museum' + req.params.id,
-        data: result,
+        data: artWorks.artObject,
       });
     })
     .catch(err => res.send(err))
@@ -52,13 +51,9 @@ app.listen(port, () => {
 })
 
 app.get('/search', (req, res) => {
-  let result = 1
-  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&q=${req.query.query}&rs=${result}`)
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&q=${req.query.query}&rs=6`)
     .then(async response => {
       const artWorks = await response.json()
-      console.log(result)
-      result = artWorks.artObjects.length
-      console.log(result)
 
       res.render('index', {
         title: 'Art Museum',
