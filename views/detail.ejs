@@ -14,6 +14,7 @@
             <div class="singleArtContainer">
                 <div>
                     <h3><%= data.title %></h3>
+                    <p><%= data.principalMakers[0].labelDesc %></p>
                     <p><%= data.label.description ? data.label.description : 'Geen beschrijving' %><br><br></p>
                     <a href="<%= data.link %>" target="_blanc">Bekijk hier meer over dit kunstwerk.</a>
                     <a href="javascript:history.back();">Terug naar resultaten</a>

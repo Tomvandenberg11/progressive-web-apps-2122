@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
     .catch(err => res.send(err))
   })
 
+// Detail page
 app.get('/art/:id', function(req, res) {
   fetch(`https://www.rijksmuseum.nl/api/nl/collection/${req.params.id}?key=${API_KEY}`)
     .then(async response => {
@@ -45,13 +46,9 @@ app.get('/art/:id', function(req, res) {
     .catch(err => res.send(err))
 })
 
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
+// Search action
 app.get('/search', (req, res) => {
-  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&q=${req.query.query}&rs=6`)
+  fetch(`https://www.rijksmuseum.nl/api/nl/collection?key=${API_KEY}&q=${req.query.query}&imgonly=true`)
     .then(async response => {
       const artWorks = await response.json()
 
@@ -61,4 +58,8 @@ app.get('/search', (req, res) => {
       });
     })
     .catch(err => res.send(err))
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
 })

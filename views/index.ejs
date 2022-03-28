@@ -7,23 +7,25 @@
     <%- include('./components/header.ejs'); -%>
 <main>
     <section class="container">
-        <% data.map((art) => {
+        <% if (data.length > 0) {
+        data.map((art) => {
             const img = art.webImage.url.slice(0, -3) + "=s1000"
         %>
 
-            <a href="art/<%= art.objectNumber %>">
-                <article style="background-image: url('<%= img %>')">
-                    <div>
-                        <h3><%= art.title %></h3>
-                        <p><%= art.principalOrFirstMaker %></p>
-                    </div>
-                </article>
-            </a>
-        <% }) %>
-<!--        <img style="width: 150px; height: 100px;" alt="loading" class="empty" src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif">-->
+        <a href="art/<%= art.objectNumber %>">
+            <article style="background-image: url('<%= img %>')">
+                <div>
+                    <h3><%= art.title %></h3>
+                    <p><%= art.principalOrFirstMaker %></p>
+                </div>
+            </article>
+        </a>
+        <% })} else {%>
+        <article class="noResults">
+            <p>Er zijn geen resultaten gevonden. Probeer een andere zoekopdracht! </p>
+        </article>
+        <%}%>
     </section>
-    <button class="displayNone">Laad meer</button>
 </main>
-<!--<script type="module" src="./js/script.js"></script>-->
 </body>
 </html>

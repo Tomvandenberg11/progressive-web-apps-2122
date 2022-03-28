@@ -105,27 +105,12 @@ main article div {
   margin-right: 50px;
 }
 
-.displayNone {
-  display: none;
-}
-
-button {
-  width: auto;
-  padding: 10px;
-  border: none;
-  background-color: rgba(211, 211, 211, 0.6);
-  height: auto;
-  transition: 0.3s;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 50px auto;
-  font-size: 20px;
-}
-
-button:hover {
-  cursor: pointer;
-  padding: 15px;
+.noResults {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 /****** SINGLE ART PAGE  ******/
@@ -149,6 +134,13 @@ button:hover {
   justify-content: space-between;
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.singleArtContainer div p:first-of-type {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .singleArtContainer img {
@@ -169,7 +161,7 @@ button:hover {
 
 .singleArt h3 {
   font-size: 36px;
-  margin-bottom: 30px;
+  line-height: 42px;
 }
 
 .singleArt a {
