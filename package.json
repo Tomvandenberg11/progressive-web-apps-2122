@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "node app.js",
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "run dev": "node app.js"
   },
   "author": "Tom van den Berg",
   "license": "MIT",
