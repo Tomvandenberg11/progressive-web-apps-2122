@@ -175,6 +175,12 @@ main article div {
   margin-top: 50px;
 }
 
+.offline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /****** MEDIAQUERIES  ******/
 @media screen and (max-width: 900px) {
   .container {
@@ -195,9 +201,6 @@ main article div {
   main article div {
     left: 15px;
     margin-right: 15px;
-  }
-  .singleArt {
-    margin-top: 70px;
   }
   .singleArt div {
     width: 95vw;

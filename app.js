@@ -59,6 +59,13 @@ app.get('/search', (req, res) => {
     .catch(err => res.send(err))
 })
 
+// Offline page
+app.get('/offline', (req, res) => {
+  res.render("offline", {
+    title: "You are Offline"
+  });
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
