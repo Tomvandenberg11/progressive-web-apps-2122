@@ -209,7 +209,7 @@ main article div {
   .singleArtContainer div {
     max-width: 100%;
     width: 100%;
-    padding: 50px 0 150px;
+    padding: 50px 0;
   }
   .singleArtContainer img {
     width: auto;
