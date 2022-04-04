@@ -3,8 +3,8 @@
   "name": "RijksDigital Art museum",
   "icons": [
     {
-      "src": "/images/icon-512.png",
-      "type": "image/png",
+      "src": "/images/icon-512.jpg",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
