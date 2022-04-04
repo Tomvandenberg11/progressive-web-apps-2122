@@ -213,7 +213,7 @@ main article div {
   }
   .singleArtContainer img {
     width: auto;
-    max-width: 100%;
+    margin: 0 auto;
   }
   .singleArt a:first-child {
     top: -50px;
@@ -224,5 +224,6 @@ main article div {
   }
   .singleArt a:last-of-type {
     margin-top: 0;
+    margin: 0;
   }
 }
