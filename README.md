@@ -48,6 +48,8 @@ Soms is het nodig om de app te draaien door middel van een server. Via VS Code k
 Voor dit project heb ik de API van het Rijksmuseum gebruikt. De API is vrij te gebruiken en bevat zo goed als alle
 schilderijen in het Rijksmuseum. Meer informatie over deze API vind je [hier](https://data.rijksmuseum.nl/object-metadata/api/).
 
+Er is wel een key nodig om de API te gebruiken. Deze kan verkregen worden door een account aan te maken bij Rijksmuseum Studio. Daarna is de key te vinden in instellingen.
+
 ## To do
 
 | To do                                   | Done? |
