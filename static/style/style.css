@@ -13,7 +13,7 @@ body {
 header {
   height: 60px;
   width: 100%;
-  background-color: rgba(211, 211, 211, 0.6);
+  background-color: rgba(211, 211, 211, 1);
   position: fixed;
   z-index: 2;
 }
@@ -61,8 +61,8 @@ input {
   padding: 10px 15px;
   font-size: 16px;
   border: 1px solid transparent;
-  width: 30vw;
-  max-width: 250px;
+  width: 40vw;
+  max-width: 350px;
 }
 
 /****** MAIN  ******/
@@ -71,6 +71,7 @@ input {
   width: 100%;
   margin: 0 auto;
   display: grid;
+  padding-top: 60px;
   grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
 }
 

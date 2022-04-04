@@ -3,16 +3,16 @@
   "name": "RijksDigital Art museum",
   "icons": [
     {
-      "src": "/images/icon-512.jpg",
+      "src": "/images/icon.jpg",
       "type": "image/jpg",
-      "sizes": "512x512"
+      "sizes": "300x300"
     }
   ],
   "start_url": "/",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "rgba(211, 211, 211, 0.6)",
+  "theme_color": "rgba(211, 211, 211, 1)",
   "description": "Rijksmuseum art",
   "screenshots": [
     {
