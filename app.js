@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
       });
     })
     .catch(err => res.send(err))
-  })
+})
 
 // Detail page
 app.get('/art/:id', function(req, res) {

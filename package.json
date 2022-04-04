@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node app.js",
     "start": "node app.js",
-    "run dev": "node app.js"
+    "run": "nodemon app.js"
   },
   "author": "Tom van den Berg",
   "license": "MIT",

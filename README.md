@@ -1,8 +1,8 @@
-# Project OBA
+# RijksDigital
 
 Welkom bij mijn project van [Progressive Web Apps](https://github.com/cmda-minor-web/web-app-from-scratch-2122 "Minor link"). Bij dit project van de Minor 'Webdesign and development' is het de bedoeling dat we een single page app gaan maken. Dit is met behulp van de OBA API.
 
-De website is [hier](https://tomvandenberg11.github.io/oba-ondernemen/ "OBA Ondernemen") te zien.
+De website is [hier](https://rijksdigital.herokuapp.com/ "RijksDigital") te zien.
 
 ![Screenshot](static/images/screenshot.png)
 
@@ -19,20 +19,21 @@ De website is [hier](https://tomvandenberg11.github.io/oba-ondernemen/ "OBA Onde
 
 ## User Story
 
-> Als jonge ondernemer wil ik meer informatie vinden over het opzetten van een onderneming, om zodoende meer kans te hebben op succes.
+> As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown
 
 ## Activity Diagram
 
 ![Activity](static/images/activity.png)
 
-## Hoe te gebruiken?
-
-De website is gemaakt om beginnende ondernemers boeken te laten zoeken wat ze bij het ondernemen kan helpen. De gebruiker kan naar schrijver, titel en onderwerp zoeken door middel van de zoekbalk. De resultaten worden gesorteerd op jaartal, zodat nieuwere, relevantere boeken als eerste te zien zijn. Als de gebruiker op het boek klikt gaat de gebruiker naar de detail pagina van het boek, waarbij de gebruiker meer informatie kan lezen en kan doorklikken naar de pagina waarbij de gebruiker kan zien waar het boek beschikbaar is.
-
 ## Installatie ⚙️
 
-Om de app lokaal te laten draaien moet het project eerst lokaal worden gecloned.
-Als dit stukje code gerunt wordt in de terminal wordt de repository lokaal gecloned:
+Om de app lokaal te laten draaien moet het project eerst lokaal worden gecloned. Als dit stukje code gerunt wordt in de terminal wordt de repository lokaal gecloned:
+
+`gh repo clone tomvandenberg11/progressive-web-apps-2122.git`
+
+Ga eerst naar de folder waarin je wilt dat het project gecloned wordt. Je kan in de terminal navigeren met cd met daar achter de map waar je heen wilt.
+
+Daarna is het nodig om node en npm geinstalleerd te hebben op je lokale computer. Als je deze stappen gevolgd hebt, worden met npm install de benodigde packages gedownload.
 
 `gh repo clone tomvandenberg11/oba-ondernemen`
 
@@ -44,7 +45,8 @@ Soms is het nodig om de app te draaien door middel van een server. Via VS Code k
 
 ## API
 
-Voor dit project heb ik de API van de OBA gebruikt en de API van Open Leermaterialen. Beide API's zijn alleen te gebruiken met een private key. De documentatie voor de API's zijn daarom ook niet openbaar, mede doordat de Open Leermaterialen API nog in de staging fase zit.
+Voor dit project heb ik de API van het Rijksmuseum gebruikt. De API is vrij te gebruiken en bevat zo goed als alle
+schilderijen in het Rijksmuseum. Meer informatie over deze API vind je [hier](https://data.rijksmuseum.nl/object-metadata/api/).
 
 ## To do
 
