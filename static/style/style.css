@@ -45,6 +45,7 @@ header div a {
 
 header div a img {
   height: 30px;
+  width: 100%;
 }
 
 header div a h2 {
@@ -89,10 +90,13 @@ section article {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  background-origin: content-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+article img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
 }
 
 main article div {

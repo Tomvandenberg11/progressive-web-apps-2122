@@ -6,13 +6,18 @@
       "src": "/images/icon.jpg",
       "type": "image/jpg",
       "sizes": "300x300"
+    },
+    {
+      "src": "/images/icon-512.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "rgba(211, 211, 211, 1)",
+  "theme_color": "#d3d3d3",
   "description": "Rijksmuseum art",
   "screenshots": [
     {

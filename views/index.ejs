@@ -9,11 +9,19 @@
     <section class="container">
         <% if (data.length > 0) {
         data.map((art) => {
-            const img = art.webImage.url.slice(0, -3) + "=s1000"
+            const img1000 = art.webImage.url.slice(0, -3) + "=s1000"
+            const img750 = art.webImage.url.slice(0, -3) + "=s750"
+            const img500 = art.webImage.url.slice(0, -3) + "=s500"
         %>
 
         <a href="art/<%= art.objectNumber %>">
-            <article style="background-image: url('<%= img %>')">
+            <article>
+                <img srcset="<%= img500 %> 500w,
+                             <%= img750 %> 750w,
+                             <%= img1000 %> 1000w"
+                     sizes="(max-width: 600px) 500px, (max-width: 1000px) 750px, 1000px"
+                     src="<%= img750 %>"
+                     alt="<%= art.title %>">
                 <div>
                     <h3><%= art.title %></h3>
                     <p><%= art.principalOrFirstMaker %></p>

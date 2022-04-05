@@ -1,6 +1,7 @@
 const express = require('express')
 const fetch = require('node-fetch')
 const app = express()
+const compression = require('compression')
 const port = process.env.PORT || 3000
 
 require('dotenv').config({path: '.env-dev'})
@@ -10,13 +11,19 @@ const {
 } = process.env
 
 // Link the templating engine to the express app
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs')
 
 // Tell the views engine/ejs where the template files are stored (Settingname, value)
-app.set('views', 'views');
+app.set('views', 'views')
+
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=365000000, immutable')
+  next()
+})
 
 // Tell express to use a 'static' folder
-app.use(express.static('static'));
+app.use(express.static('static'))
+app.use(compression())
 
 // Create a home route
 app.get('/', (req, res) => {

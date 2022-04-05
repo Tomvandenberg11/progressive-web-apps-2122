@@ -32,25 +32,13 @@ self.addEventListener('fetch', (event) => {
       caches.open(CORE_CACHE_VERSION)
         .then(cache => cache.match(event.request.url))
     )
-  } if (isHtmlGetRequest(event.request)) {
+  } else if (isHtmlGetRequest(event.request)) {
     console.log('html get request', event.request.url)
     // generic fallback
     event.respondWith(
       caches.open('html-cache')
         .then(cache => cache.match(event.request.url))
         .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
-        .catch(e => {
-          return caches.open(CORE_CACHE_VERSION)
-            .then(cache => cache.match('/offline'))
-        })
-    )
-  } else if (isCssGetRequest(event.request)) {
-    console.log('Css get request', event.request.url)
-    // generic fallback
-    event.respondWith(
-      caches.open('css-cache')
-        .then(cache => cache.match(event.request.url))
-        .then(response => response ? response : fetchAndCache(event.request, 'css-cache'))
         .catch(e => {
           return caches.open(CORE_CACHE_VERSION)
             .then(cache => cache.match('/offline'))
