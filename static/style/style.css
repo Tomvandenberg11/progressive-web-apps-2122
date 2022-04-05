@@ -86,7 +86,7 @@ input {
 section article {
   width: 50vw;
   display: flex;
-  height: 100vh;
+  height: 92vh;
   flex-direction: column;
   position: relative;
   overflow: hidden;
