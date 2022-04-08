@@ -19,11 +19,11 @@ De website is [hier](https://rijksdigital.herokuapp.com/ "RijksDigital") te zien
 - [Licence](#licence)
 - [Credits](#credits)
 
-## User Story
+## User Story ✍🏼
 
 > As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown
 
-## Rendering
+## Rendering ⏳
 
 #### Client side rendering
 
@@ -35,7 +35,7 @@ Bij server side rendering wordt de content op de server gerendered. Hierbij word
 
 ## Installatie ⚙️
 
-#### Clonen
+#### Clonen 
 
 Om de app lokaal te laten draaien moet het project eerst lokaal worden gecloned.
 Als dit stukje code gerunt wordt in de terminal wordt de repository lokaal gecloned:
@@ -55,11 +55,11 @@ Als je de bovenstaande stappen gevolgd hebt kan de app opgestart worden door:
 te runnen in de terminal.
 Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 
-## Activity Diagram
+## Activity Diagram ➡️
 
 ![Activity](static/images/activity.png)
 
-## Service Worker
+## Service Worker 🏋🏻‍♀️
 De service worker zorgt ervoor dat bepaalde bestanden gecached worden in het geval er geen internet connectie meer is. De bestanden die ik cache zijn:
 ```javascript
 const CORE_ASSETS = [
@@ -74,7 +74,7 @@ const CORE_ASSETS = [
 
 Hierdoor zijn deze bestanden ook beschikbaar als er geen internet connecie is. De bestanden worden opgeslagen in de browser. 
 
-## Optimalisaties
+## Optimalisaties 💨
 Voordat ik optimalisatie aanpassingen had gedaan, kwamen er een aantal problemen naar voren. Bijvoorbeeld dat er geen `apple-touch-icon` is toegevoegd en dat de pagina niet scalable is. Het laatste probleem heb ik opgelost door `user-scalable=no` te verwijderen uit de head, zodat de gebruiker de pagina wel kan scalen.
 
 Een ander probleem is dat mijn images als `background-image` in CSS werden getoond, in plaats van een `<img/>` tag. Dit heb ik toen verandert, zodat ik gebruik kan maken van `srcset`.
@@ -97,14 +97,14 @@ Voordat ik deze optimalisatie aanpassingen gedaan had, was dit mijn score in Chr
 Nadat ik de optimalisatie aanpassingen heb geimplementeerd, is dit mijn score in Chrome Lighthouse:
 ![Activity](static/images/newLighthouse.png)
 
-## API
+## API 💿
 
 Voor dit project heb ik de API van het Rijksmuseum gebruikt. De API is vrij te gebruiken en bevat zo goed als alle
 schilderijen in het Rijksmuseum. Meer informatie over deze API vind je [hier](https://data.rijksmuseum.nl/object-metadata/api/).
 
 Er is wel een key nodig om de API te gebruiken. Deze kan verkregen worden door een account aan te maken bij Rijksmuseum Studio. Daarna is de key te vinden in instellingen.
 
-## To do
+## To do ✅
 
 | To do                                   | Done? |
 |:----------------------------------------|:-----:|
