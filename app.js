@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
       res.render('index', {
         title: 'Art Museum',
         data: artWorks.artObjects,
-      });
+      })
     })
     .catch(err => res.send(err))
 })
