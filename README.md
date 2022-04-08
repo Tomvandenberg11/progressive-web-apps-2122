@@ -55,6 +55,10 @@ Als je de bovenstaande stappen gevolgd hebt kan de app opgestart worden door:
 te runnen in de terminal.
 Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 
+#### Native app
+
+De website kan ook geinstalleerd worden als native app. Dit komt omdat in de `manifest.json` de iconen en instellingen staan om de app te installeren als native app.
+
 ## Activity Diagram ➡️
 
 ![Activity](static/images/activity.png)
@@ -92,6 +96,32 @@ app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
 ```
 
 De font van de website heb ik ingeladen via de head van de website. Ik heb mijn font namelijk van Google Fonts. In de link is het mogelijk om display=swap aan te zetten, zodat eerst een fall-back font geladen wordt als het echte font nog niet gedownload is.
+
+Ook heb ik de images via `srcset` ingeladen. Hierdoor bepaalt de browser welke image ingeladen wordt, zodat dit de beste performance voor de website is.
+
+```javascript
+data.map((art) => {
+            const img1000 = art.webImage.url.slice(0, -3) + "=s1000"
+            const img750 = art.webImage.url.slice(0, -3) + "=s750"
+            const img500 = art.webImage.url.slice(0, -3) + "=s500"
+        %>
+
+        <a href="art/<%= art.objectNumber %>">
+            <article>
+                <img srcset="<%= img500 %> 500w,
+                             <%= img750 %> 750w,
+                             <%= img1000 %> 1000w"
+                     sizes="(max-width: 600px) 500px, (max-width: 1000px) 750px, 1000px"
+                     src="<%= img750 %>"
+                     alt="<%= art.title %>">
+                <div>
+                    <h3><%= art.title %></h3>
+                    <p><%= art.principalOrFirstMaker %></p>
+                </div>
+            </article>
+        </a>
+        <% })}
+```
 
 Voordat ik deze optimalisatie aanpassingen gedaan had, was dit mijn score in Chrome Lighthouse:
 ![Activity](static/images/oldLighthouse.png)
