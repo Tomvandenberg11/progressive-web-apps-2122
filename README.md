@@ -8,16 +8,16 @@ De website is [hier](https://rijksdigital.herokuapp.com/ "RijksDigital") te zien
 
 ## Inhoudsopgave
 
-- [User Story](#user-story)
-- [Rendering](#rendering)
-- [Installatie](#installatie)
-- [API](#api)
-- [Activity Diagram](#activity-diagram)
-- [Service Worker](#service-worker)
-- [Optimalisatie](#optimalisatie)
-- [To do](#to-do)
-- [Licence](#licence)
-- [Credits](#credits)
+- [User Story](#user-story-)
+- [Rendering](#rendering-)
+- [Installatie](#installatie-)
+- [API](#api-)
+- [Activity Diagram](#activity-diagram-)
+- [Service Worker](#service-worker-)
+- [Optimalisaties](#optimalisaties-)
+- [To do](#to-do-)
+- [Licence](#licence-)
+- [Credits](#credits-)
 
 ## User Story ✍🏼
 
