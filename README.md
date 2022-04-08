@@ -107,15 +107,15 @@ Er is wel een key nodig om de API te gebruiken. Deze kan verkregen worden door e
 ## To do
 
 | To do                                   | Done? |
-| :-------------------------------------- | :---: |
-| Making search work                      |  ✅   |
-| Empty results after search              |  ✅   |
-| Error states                            |       |
-| Loading states                          |       |
-| Implement search                        |  ✅   |
-| Implement detail page                   |  ✅   |
-| Implement detail page after search      |  ✅   |
-| Fix error after too less search results |  ✅   |
+|:----------------------------------------|:-----:|
+| Empty results after search              |   ✅   |
+| Error states                            |   ✅   |
+| Implement search                        |   ✅   |
+| Implement detail page                   |   ✅   |
+| Implement detail page after search      |   ✅   |
+| Fix error after too less search results |   ✅   |
+| Increasing performance                  |   ✅   |
+| Deploying on Heroku                     |   ✅   |
 
 ## Licence 👨🏻‍⚖️
 
