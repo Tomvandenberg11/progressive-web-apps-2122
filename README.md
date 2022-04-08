@@ -35,7 +35,7 @@ Bij server side rendering wordt de content op de server gerendered. Hierbij word
 
 ## Installatie ⚙️
 
-#### Clonen 
+#### Clonen
 
 Om de app lokaal te laten draaien moet het project eerst lokaal worden gecloned.
 Als dit stukje code gerunt wordt in de terminal wordt de repository lokaal gecloned:
@@ -60,31 +60,33 @@ Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 ![Activity](static/images/activity.png)
 
 ## Service Worker 🏋🏻‍♀️
+
 De service worker zorgt ervoor dat bepaalde bestanden gecached worden in het geval er geen internet connectie meer is. De bestanden die ik cache zijn:
+
 ```javascript
 const CORE_ASSETS = [
-    '/offline',
-    '/style/style.css',
-    '/script/script.js',
-    '/images/logo.png',
-    '/images/icon-512.jpg',
-    'manifest.json'
+  "/offline",
+  "/style/style.css",
+  "/script/script.js",
+  "/images/logo.png",
+  "/images/icon-512.jpg",
+  "manifest.json",
 ]
 ```
 
-Hierdoor zijn deze bestanden ook beschikbaar als er geen internet connecie is. De bestanden worden opgeslagen in de browser. 
+Hierdoor zijn deze bestanden ook beschikbaar als er geen internet connecie is. De bestanden worden opgeslagen in de browser.
 
 ## Optimalisaties 💨
+
 Voordat ik optimalisatie aanpassingen had gedaan, kwamen er een aantal problemen naar voren. Bijvoorbeeld dat er geen `apple-touch-icon` is toegevoegd en dat de pagina niet scalable is. Het laatste probleem heb ik opgelost door `user-scalable=no` te verwijderen uit de head, zodat de gebruiker de pagina wel kan scalen.
 
 Een ander probleem is dat mijn images als `background-image` in CSS werden getoond, in plaats van een `<img/>` tag. Dit heb ik toen verandert, zodat ik gebruik kan maken van `srcset`.
-
 
 Ook heb ik compression en cache control toegevoegd aan de applicatie. Compression kan toegevoegd worden door de npm compression package te installeren. Cache control kan in express toegevoegd worden door het volgende stukje code:
 
 ```javascript
 app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
-  res.setHeader('Cache-Control', 'max-age=365000000, immutable')
+  res.setHeader("Cache-Control", "max-age=365000000, immutable")
   next()
 })
 ```
@@ -97,6 +99,8 @@ Voordat ik deze optimalisatie aanpassingen gedaan had, was dit mijn score in Chr
 Nadat ik de optimalisatie aanpassingen heb geimplementeerd, is dit mijn score in Chrome Lighthouse:
 ![Activity](static/images/newLighthouse.png)
 
+Als suggestie in Lighthouse staat nog dat ik de foto's in een modernere bestandstype moet opslaan. Dit kan ik helaas niet doen omdat de foto's uit de API komen, dus daar heb ik geen invloed op.
+
 ## API 💿
 
 Voor dit project heb ik de API van het Rijksmuseum gebruikt. De API is vrij te gebruiken en bevat zo goed als alle
@@ -107,15 +111,15 @@ Er is wel een key nodig om de API te gebruiken. Deze kan verkregen worden door e
 ## To do ✅
 
 | To do                                   | Done? |
-|:----------------------------------------|:-----:|
-| Empty results after search              |   ✅   |
-| Error states                            |   ✅   |
-| Implement search                        |   ✅   |
-| Implement detail page                   |   ✅   |
-| Implement detail page after search      |   ✅   |
-| Fix error after too less search results |   ✅   |
-| Increasing performance                  |   ✅   |
-| Deploying on Heroku                     |   ✅   |
+| :-------------------------------------- | :---: |
+| Empty results after search              |  ✅   |
+| Error states                            |  ✅   |
+| Implement search                        |  ✅   |
+| Implement detail page                   |  ✅   |
+| Implement detail page after search      |  ✅   |
+| Fix error after too less search results |  ✅   |
+| Increasing performance                  |  ✅   |
+| Deploying on Heroku                     |  ✅   |
 
 ## Licence 👨🏻‍⚖️
 
